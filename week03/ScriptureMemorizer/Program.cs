@@ -29,6 +29,6 @@ class Program
         }
 
         Console.Clear();
-        Console.WriteLine("Finish...");
+        Console.WriteLine("Finish!");
     }
 }
