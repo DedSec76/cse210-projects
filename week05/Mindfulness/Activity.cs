@@ -5,11 +5,15 @@ using System.Threading;
 
 public class Activity
 {
-    private string _name;
-    private string _description;
-    private int _duration;
+    protected string _name;
+    protected string _description;
+    protected int _duration;
     
-    public Activity(string name, string description, int duration = 10)
+    public Activity()
+    {
+        
+    }
+    public Activity(string name, string description, int duration)
     {
         _name = name;
         _description = description;
@@ -44,11 +48,12 @@ public class Activity
     public void DisplayStartingMessage()
     {
         Console.Clear();
-        Console.WriteLine($"Welcome to the {_name} Activity");
+        Console.WriteLine($"Welcome to the {_name} Activity\n");
+        Console.WriteLine($"{_description}\n");
     }
     public void DisplayEndingMessage()
     {
-        Console.WriteLine("\nWell done!! \n");
+        Console.WriteLine("\nWell done!!");
         ShowSpinner(5);
         Console.WriteLine($"\nYou have completed another {_duration} seconds of the {_name} Activity");
         ShowSpinner(5);

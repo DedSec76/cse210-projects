@@ -1,9 +1,10 @@
 using System;
 
-class Program
-{
+class Program1
+{ 
     static void Main(string[] args)
     {
+
         int choice = -1;
 
         while(choice != 4)
@@ -21,7 +22,7 @@ class Program
             // Menu Options
             if (choice == 1)
             {
-                BreathingActivity b1 = new BreathingActivity("hola","no",11);
+                BreathingActivity b1 = new BreathingActivity();
                 b1.Run();
             }
             else if (choice == 2)
