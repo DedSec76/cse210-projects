@@ -14,15 +14,6 @@ public class BreathingActivity : Activity
     public void Run()
     {
         DisplayStartingMessage();
-    
-        Console.Write("How long, in seconds, would you like for your session? ");
-        int seconds = int.Parse(Console.ReadLine());
-        SetDuration(seconds);
-
-        // Show Spinner
-        Console.Clear();
-        Console.Write("Get ready...\n");
-        ShowSpinner(5);
 
         DateTime end = DateTime.Now.AddSeconds(GetDuration());
         while(DateTime.Now < end)

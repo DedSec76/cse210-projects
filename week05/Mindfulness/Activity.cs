@@ -5,14 +5,10 @@ using System.Threading;
 
 public class Activity
 {
-    protected string _name;
-    protected string _description;
-    protected int _duration;
+    private string _name;
+    private string _description;
+    private int _duration;
     
-    public Activity()
-    {
-        
-    }
     public Activity(string name, string description, int duration)
     {
         _name = name;
@@ -50,6 +46,14 @@ public class Activity
         Console.Clear();
         Console.WriteLine($"Welcome to the {_name} Activity\n");
         Console.WriteLine($"{_description}\n");
+
+        Console.Write("How long, in seconds, would you like for your session? ");
+        int seconds = int.Parse(Console.ReadLine());
+        _duration = seconds;
+
+        Console.Clear();
+        Console.WriteLine("Get ready...");
+        ShowSpinner(5);
     }
     public void DisplayEndingMessage()
     {
@@ -63,7 +67,7 @@ public class Activity
         DateTime endTime = DateTime.Now.AddSeconds(seconds);
 
         // Spinner
-        string[] spinner = {"|","/","-", "\\"};
+        string[] spinner = {"|","/","-", "\\","|","/","-", "\\"};
         int i = 0;
 
         // Loop to Display the spinner
