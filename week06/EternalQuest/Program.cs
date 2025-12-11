@@ -1,3 +1,5 @@
+
+// The console interface was improved to make it more dynamic and user-friendly for the end user.
 using System;
 
 class Program
